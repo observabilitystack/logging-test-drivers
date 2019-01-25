@@ -18,7 +18,7 @@ def response_size():
     return str(random.randrange(1000,10000))
 
 def http_path():
-    SUB_DIRS = ["", "blog/", "technology", "career", "services", "about-us/"]
+    SUB_DIRS = ["", "blog/", "technology/", "career/", "services/", "about-us/"]
     RESOURCES = ["index.html", "check.js", "styles.css", "logo.png", "header.html", "footer.html"]
     return "/%s%s" % (random.choice(SUB_DIRS), random.choice(RESOURCES))
 
