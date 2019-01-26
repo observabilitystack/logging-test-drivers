@@ -16,4 +16,6 @@ services:
     #
     # As of now, there are no variables that can be set.
     logging-test-driver-spring-boot:
-        image: observabilitystack/logging-test-driver-spring-boot:1
+        image: observabilitystack/logging-test-driver-spring-boot:2
+        environment:
+            LOG_LINES_PER_MINUTE: 120
