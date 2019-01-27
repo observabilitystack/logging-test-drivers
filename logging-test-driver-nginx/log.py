@@ -26,19 +26,12 @@ def apache_unified_log_line():
     APACHE_UNIFIED = "%s - - [%s] \"GET %s HTTP/1.0\" 200 %s"
     return (APACHE_UNIFIED % (ip_address(), apache_unified_ts(), http_path(), response_size()))
 
-def get_output_writer():
-    if ('LOG_TO_FILE' in env):
-        def output_logfile(line):
-            f=open(env['LOG_TO_FILE'], "a")
-            print(line, file=f)
-            f.close()
-        return output_logfile
-
-    def output_stdout(line):
-        print(line)
-    return output_stdout
+def output(line):
+    f=open("/var/log/access.log", "a")
+    print(line, file=f)
+    f.close()
+    print(line)
 
 while(True):
-    output = get_output_writer()
     output(apache_unified_log_line())
     sleep()

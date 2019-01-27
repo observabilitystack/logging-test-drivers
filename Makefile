@@ -3,7 +3,7 @@
 build: build-nginx build-spring-boot
 release: release-nginx release-spring-boot
 
-LOGGING_TEST_DRIVER_NGINX_VERSION="1"
+LOGGING_TEST_DRIVER_NGINX_VERSION="2"
 
 build-nginx:
 	docker build --tag observabilitystack/logging-test-driver-nginx:$(LOGGING_TEST_DRIVER_NGINX_VERSION) logging-test-driver-nginx/
