@@ -21,6 +21,8 @@ There are some `docker-compose` files that illustrate the usage of the container
 
 * [usage/log-to-stdout/docker-compose.yml](usage/log-to-stdout/docker-compose.yml) shows how you can start the containers and let them log to `stdout` which is the default way. 
 
+* [usage/log-to-file/docker-compose.yml](usage/log-to-file/docker-compose.yml) shows how you can start the containers and let them log to `stdout` **and** to a file which is located in a mapped volume. 
+
 ## Build and release
 
 To build and tag the Docker images locally, just call 

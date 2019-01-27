@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+
+    # Container that emits nginx access logs randomly
+    #
+    # The variable LOG_LINES_PER_MINUTE defines the (approx.) frequency
+    # of log line emission. (2/sec in this case)
+    #
+    # The container logs to stdout and to /var/log/access.log simultaneously
+    # By mapping a local folder to the /var/log folder of the container,
+    # we get access to the logs outside the container
+    #
+    logging-test-driver-nginx:
+        image: observabilitystack/logging-test-driver-nginx:2
+        environment:
+            LOG_LINES_PER_MINUTE: 120
+        volumes:
+          - ./nginx-log/:/var/log/
+
+    # Container that emits SpringBoot/Java logs randomly
+    #
+    # The variable LOG_LINES_PER_MINUTE defines the (approx.) frequency
+    # of log line emission. (2/sec in this case)
+    #
+    # The container logs to stdout and to /var/log/spring.log simultaneously
+    # By mapping a local folder to the /var/log folder of the container,
+    # we get access to the logs outside the container
+    #
+    logging-test-driver-spring-boot:
+        image: observabilitystack/logging-test-driver-spring-boot:3
+        environment:
+            LOG_LINES_PER_MINUTE: 120
+        volumes:
+          - ./spring-boot-log/:/var/log/
