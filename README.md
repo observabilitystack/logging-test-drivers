@@ -19,7 +19,7 @@ $ docker pull observabilitystack/logging-test-driver-spring-boot
 
 There are some `docker-compose` files that illustrate the usage of the containers. See the comments in the compose-files for further details:
 
-* [usage/docker-compose.yml](usage/docker-compose.yml) shows how you can start the containers and let them log to `stdout` which is the default way. 
+* [usage/log-to-stdout/docker-compose.yml](usage/log-to-stdout/docker-compose.yml) shows how you can start the containers and let them log to `stdout` which is the default way. 
 
 ## Build and release
 

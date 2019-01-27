@@ -14,7 +14,9 @@ services:
 
     # Container that emits SpringBoot/Java logs randomly
     #
-    # As of now, there are no variables that can be set.
+    # The variable LOG_LINES_PER_MINUTE defines the (approx.) frequency
+    # of log line emission. (2/sec in this case)
+    #
     logging-test-driver-spring-boot:
         image: observabilitystack/logging-test-driver-spring-boot:2
         environment:
