@@ -8,7 +8,7 @@ services:
     # of log line emission. (2/sec in this case)
     #
     logging-test-driver-nginx:
-        image: observabilitystack/logging-test-driver-nginx:1
+        image: observabilitystack/logging-test-driver-nginx:2
         environment:
             LOG_LINES_PER_MINUTE: 120
 
@@ -18,6 +18,6 @@ services:
     # of log line emission. (2/sec in this case)
     #
     logging-test-driver-spring-boot:
-        image: observabilitystack/logging-test-driver-spring-boot:2
+        image: observabilitystack/logging-test-driver-spring-boot:4
         environment:
             LOG_LINES_PER_MINUTE: 120

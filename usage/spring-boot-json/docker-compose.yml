@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+    # Container that emits SpringBoot/Java logs randomly
+    #
+    # The variable LOG_LINES_PER_MINUTE defines the (approx.) frequency
+    # of log line emission. (2/sec in this case)
+    #
+    # If the variable SPRING_PROFILES_ACTIVE is set to 'json', the log
+    # output for stdout and the log file(s) is formatted in JSON
+    #
+    # The container logs to stdout and to /var/log/spring.log simultaneously
+    # By mapping a local folder to the /var/log folder of the container,
+    # we get access to the logs outside the container
+    #
+    logging-test-driver-spring-boot:
+        image: observabilitystack/logging-test-driver-spring-boot:4
+        environment:
+            LOG_LINES_PER_MINUTE: 120
+            SPRING_PROFILES_ACTIVE: json
+        volumes:
+          - ./spring-boot-log/:/var/log/
