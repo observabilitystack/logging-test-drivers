@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>org.observabilitystack</groupId>
 	<artifactId>logging-test-driver-spring-boot</artifactId>
-	<version>5</version>
+	<version>6</version>
 	<name>logging-test-driver-spring-boot</name>
 	<description>Test driver that constantly emits random log lines (Spring Boot style)</description>
 

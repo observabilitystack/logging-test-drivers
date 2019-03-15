@@ -28,7 +28,7 @@ services:
     # we get access to the logs outside the container
     #
     logging-test-driver-spring-boot:
-        image: observabilitystack/logging-test-driver-spring-boot:5
+        image: observabilitystack/logging-test-driver-spring-boot:6
         environment:
             LOG_LINES_PER_MINUTE: 120
         volumes:
